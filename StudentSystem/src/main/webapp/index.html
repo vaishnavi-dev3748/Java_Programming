@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Form</title>
+
+<style>
+    body {
+        font-family: Arial;
+        background: linear-gradient(to right, #74ebd5, #9face6);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 400px;
+        margin: 50px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px gray;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    input[type="text"], input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #45a049;
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Student Information</h2>
+
+<form action="StudentServlet" method="post">
+
+    PRN:
+    <input type="text" name="prn">
+
+    Name:
+    <input type="text" name="name">
+
+    DOB:
+    <input type="date" name="dob">
+
+    Gender:<br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <br><br>
+
+    Subjects:<br>
+    <input type="checkbox" name="sub" value="Java"> Java<br>
+    <input type="checkbox" name="sub" value="Python"> Python<br>
+    <input type="checkbox" name="sub" value="C"> C<br>
+    <input type="checkbox" name="sub" value="C++"> C++<br>
+    <input type="checkbox" name="sub" value="DBMS"> DBMS<br>
+    <input type="checkbox" name="sub" value="OS"> OS<br><br>
+
+    <input type="submit" value="Submit" class="btn">
+
+</form>
+
+</div>
+
+</body>
+</html>
